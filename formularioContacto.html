@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="css/stylesForm.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+    <div class="contact-form-container">
+        <h2>Contáctanos</h2>
+        <form id="contactForm" action="form/formulario.php" method="POST">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <span class="error" id="nombreError"></span>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+    
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <span class="error" id="telefonoError"></span>
+    
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <span class="error" id="mensajeError"></span>
+
+            <div class="g-recaptcha" data-sitekey="6Lfw6mgqAAAAACD8Si_QzgC8gnYCFirv8C4mw1Cs"></div>
+    
+            <button type="submit">Enviar</button>
+        </form>
+    
+        <div id="successMessage">
+            <h2>¡Gracias por tu mensaje!</h2>
+            <p>Nos pondremos en contacto contigo pronto.</p>
+        </div>
+    </div>
+
+
+
+    <div class="contenedorFooter">
+        <footer>
+            <div class="info">
+
+            </div>
+            <div class="footerContacto">
+
+            </div>
+            <div class="ubicacion">
+
+            </div>
+        </footer>
+    </div>
+    <script src="./js/formC.js"></script>
+</body>
+</html>

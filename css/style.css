@@ -1,0 +1,270 @@
+:root {
+    --color_primario: #F7D8A9;
+    --color_primario_suave: #f8e3c3;
+    --color_blanco: #fff;
+    --color_secundario: #D32F2F;
+    --color_font: #212121;
+    --color_verde: #0B3022;
+    --color_amarillo: #FDB00B;
+    --color_iconos: #F57C00;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.header {
+    height: var(--altura_header);
+    background-color: var(--color_primario);
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+}
+
+.menu_hamburguesa {
+    display: none;
+}
+
+.menu_hamburguesa:checked+.ul_links {
+    height: calc(100vh - var(--altura_header));
+}
+
+.logo {
+    color: var(--color_blanco);
+}
+
+.labe_hamburguesa {
+    color: var(--color_font);
+}
+
+.list_icon {
+    color: var(--color_font);
+    cursor: pointer;
+}
+
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario_suave);
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    gap: 3rem;
+    transition: all .3s;
+
+}
+
+#liInicio {
+    margin-top: 3rem;
+
+}
+
+.li_links {}
+
+.link {
+    font-size: 1.5rem;
+    color: var(--color_font);
+    font-weight: bold;
+
+}
+
+.logoNavbar {
+    border-radius: 50%;
+    height: var(--altura_header);
+}
+
+/* Footer  */
+
+.contenedorFooter {
+    background-color: var(--color_primario);
+
+}
+
+.copy {
+    background-color: #212121;
+    color: var(--color_primario_suave);
+    text-align: center;
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+footer {
+    display: grid;
+    padding: 0 var(--padding_left_right);
+    overflow: hidden;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.iframeFooter {
+    border-radius: 1rem;
+    box-shadow: 4px 4px 4px #21212181;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.info h3 {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.info p {
+    text-align: center;
+}
+
+.footerContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
+    padding-bottom: 1rem;
+    
+}
+
+.footerContacto h3 {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.footerContacto ul {
+    text-align: center;
+}
+
+.footerContacto li {
+    list-style-type: none;
+}
+
+.footerContacto li a {
+    text-decoration: none;
+    color: var(--color_font);
+}
+
+.footerContacto li a i {
+    color: var(--color_secundario);
+    font-size: 18px;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
+    padding-bottom: 1rem;
+}
+
+.ubicacion h3 {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.soloEnMobile {
+    width: 100%;
+    border: 1px dotted var(--color_font);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* fin footer  */
+
+
+/* /////////////////////////////////////////
+////////////////RESPONSIVE/////////////////
+////////////////////////////////////////*/
+
+/* @media (min-width: 576px) {
+    Estilos para móviles grandes - no esta en uso por el momento
+}   */
+
+@media (min-width:768px) {
+    #liInicio {
+        margin-top: 0;
+    }
+
+    /* navbar */
+    .labe_hamburguesa {
+        display: none;
+    }
+
+    .ul_links {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+        background-color: transparent;
+    }
+
+    .link {
+        font-size: 1.2rem;
+        transition: all .3s;
+        padding: .2rem .7rem;
+    }
+
+    .link:hover {
+        color: #C2163E;
+    }
+
+    footer{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+}
+
+@media (min-width: 992px) {
+   .soloEnMobile{
+    display: none;
+   }
+
+   footer{
+    grid-template-columns: repeat(3, 1fr);
+   }
+
+   .ubicacion iframe{
+    height: auto;
+   }
+}
+
+@media (min-width: 1200px) {
+    /* Estilos para PC de escritorio estándar */
+}
+
+@media (min-width: 1600px) {
+    /* Estilos para pantallas grandes o ultra-widescreen */
+}

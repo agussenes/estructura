@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/stylesForm.css">
+    <title>Estructura</title>
+    <link rel="icon" href="/" type="image/png">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <!-- <a href="#"><img src="./img/ramensito.jpg" alt="logo" class="logoNavbar"></a> -->
+            <a href="#"><i class="fa fa-cubes" aria-hidden="true"></i></a>
+
+            <label class="labe_hamburguesa" for="menu_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+
+            <ul class="ul_links">
+                <li class="li_links" for="menu_hamburguesa" id="liInicio">
+                    <a href="#menu" class="link">Menú</a>
+                </li>
+                <li class="li_links">
+                    <a href="#conocenos" class="link">Conócenos</a>
+                </li>
+                <li class="li_links">
+                    <a href="#contacto" class="link">Contacto</a>
+                </li>
+            </ul>
+
+
+        </nav>
+    </header>
+
+
+    <div class="contact-form-container">
+        <h2>Contáctanos</h2>
+        <form id="contactForm" action="form/formulario.php" method="POST">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <span class="error" id="nombreError"></span>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <span class="error" id="telefonoError"></span>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <span class="error" id="mensajeError"></span>
+
+            <div class="g-recaptcha" data-sitekey="6Lfw6mgqAAAAACD8Si_QzgC8gnYCFirv8C4mw1Cs"></div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="successMessage">
+            <h2>¡Gracias por tu mensaje!</h2>
+            <p>Nos pondremos en contacto contigo pronto.</p>
+        </div>
+    </div>
+
+
+
+    <div class="contenedorFooter">
+        <footer>
+            <div class="info">
+                <h3>Cooperativa Güemes</h3>
+                <p>Desde 1973, brindamos seguridad privada en Córdoba. Con 180 asociados y 63 clientes, seguimos
+                    creciendo y asegurando calidad en nuestros servicios</p>
+                <hr class="soloEnMobile">
+            </div>
+            <div class="footerContacto">
+                <h3>Seguinos en:</h3>
+                <ul>
+                    <li><a href="/"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href="/"><i class="fa fa-times" aria-hidden="true"></i> Twitter</a></li>
+                </ul>
+                <hr class="soloEnMobile">
+            </div>
+            <div class="ubicacion">
+                <h3>Ubicación</h3>
+                <iframe class="iframeFooter"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27240.229408039257!2d-64.16305!3d-31.413336000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2a6ac4d34c1%3A0xb19f83c407df85d7!2sGral.%20Paz%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1729605608806!5m2!1ses-419!2sar"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </footer>
+        <div class="copy">
+            <p>Todos los derechos reservados © Desarrollado por Usina Creativa</p>
+        </div>
+    </div>
+    <script src="./js/formC.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="https://kit.fontawesome.com/a720cb8047.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
