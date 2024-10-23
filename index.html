@@ -15,7 +15,7 @@
     <header class="header">
         <nav class="navbar">
             <!-- <a href="#"><img src="./img/ramensito.jpg" alt="logo" class="logoNavbar"></a> -->
-            <a href="#"><i class="fa fa-cubes" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-cubes " aria-hidden="true"></i></a>
 
             <label class="labe_hamburguesa" for="menu_hamburguesa">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
@@ -42,39 +42,232 @@
 
         </nav>
     </header>
+    <!-- portada  -->
 
+    <section class="portada">
+        <div class="contenedorGenPorada">
+            <div class="tituloPortada">
+                <h1> Bienvenido a nuestra Cooperativa de Seguridad</h1>
+                <p>Ofrecemos soluciones de seguridad confiables y personalizadas para proteger lo
+                    que más valoras.</p>
+                <div class="botonesPortada">
+                    <a href="#" class="botonPortada1"><button>Nuestros servicios</button></a>
+                    <a href="#" class="botonPortada2"><button>Contáctanos</button></a>
+                </div>
+            </div>
+            <div class="contenedorImagenPorada">
+                <img src="img/edificioPortada.png"
+                    alt="instalaciones fisicas de la cooperativa + descripcion para  SEO">
+            </div>
+        </div>
+    </section>
 
-    <div class="contact-form-container">
-        <h2>Contáctanos</h2>
-        <form id="contactForm" action="form/formulario.php" method="POST">
-            <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <span class="error" id="nombreError"></span>
+    <!-- fin portada  -->
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <span class="error" id="emailError"></span>
+    <!-- propuesta de valor  -->
 
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" required>
-            <span class="error" id="telefonoError"></span>
+    <section class="propuestaDeValor">
+        <div class="contenedorGenPropuesta">
+            <h2>Propuesta de valor</h2>
+            <div class="conGenvalores">
+                <div class="valores">
+                    <h3>Tecnología de Vanguardia</h3>
+                    <p>Sistemas de seguridad inteligentes y
+                        escalables para adaptarse a tus
+                        necesidades.
+                    </p>
+                </div>
+                <div class="valores">
+                    <h3>Experiencia Probada</h3>
+                    <p>Más de 20 años brindando soluciones de
+                        seguridad a empresas líderes.</p>
+                </div>
+                <div class="valores">
+                    <h3>Atención Personalizada</h3>
+                    <p>Un equipo dedicado que se enfoca en
+                        entender tus retos y brindar soluciones a la
+                        medida.</p>
+                </div>
+            </div>
+        </div>
 
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            <span class="error" id="mensajeError"></span>
+    </section>
 
-            <div class="g-recaptcha" data-sitekey="6Lfw6mgqAAAAACD8Si_QzgC8gnYCFirv8C4mw1Cs"></div>
+    <!-- fin propuesta valor  -->
 
-            <button type="submit">Enviar</button>
-        </form>
+    <!-- seccion servicios  -->
 
-        <div id="successMessage">
-            <h2>¡Gracias por tu mensaje!</h2>
-            <p>Nos pondremos en contacto contigo pronto.</p>
+    <section class="seccionServicios">
+        <div class="contenedorGeneralServicios">
+            <h2>Nuestros servicios</h2>
+            <div class="contenedorServicios">
+                <div class="servicios">
+                    <div class="numero">
+                        <span>1</span>
+                    </div>
+                    <div class="contenido">
+                        <h3>Monitoreo 24/7</h3>
+                        <p>Vigila tus instalaciones las 24 horas del día, los 7 días de la
+                            semana.</p>
+                    </div>
+                </div>
+                <div class="servicios">
+                    <div class="numero">
+                        <span>2</span>
+                    </div>
+                    <div class="contenido">
+                        <h3>Respuesta de Emergencia</h3>
+                        <p>Nuestro equipo de seguridad responde rápidamente ante
+                            cualquier incidente.</p>
+                    </div>
+                </div>
+                <div class="servicios">
+                    <div class="numero">
+                        <span>3</span>
+                    </div>
+                    <div class="contenido">
+                        <h3>Soluciones Tecnológicas</h3>
+                        <p>Cámaras de seguridad, sistemas de alarma y control de acceso
+                            de vanguardia.</p>
+                    </div>
+                </div>
+                <div class="servicios">
+                    <div class="numero">
+                        <span>4</span>
+                    </div>
+                    <div class="contenido">
+                        <h3>Capacitación</h3>
+                        <p>Entrenamos a tu personal en protocolos de seguridad y
+                            mejores prácticas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- fin seccion servicios  -->
+
+    <!-- seccion testimoniales  -->
+
+    <section class="sectionTestimoniales">
+        <div class="contenedorGeneralTestimoniales">
+            <h2>Testimonios de clientes satisfechos</h2>
+            <div class="contenedorTestimoniales">
+                <div class="testimoniales">
+                    <h3>Empresa Líder en Tecnología</h3>
+                    <p>"La Cooperativa de Seguridad nos ha
+                        brindado una tranquilidad inigualable.
+                        Su equipo es altamente profesional y
+                        responde rápidamente ante cualquier
+                        situación."</p>
+                </div>
+                <div class="testimoniales">
+                    <h3>Organización Sin Fines de Lucro</h3>
+                    <p>"Estamos muy satisfechos con los
+                        servicios de seguridad que nos han
+                        proporcionado. Han sido un socio
+                        confiable y han contribuido a la
+                        seguridad de nuestras instalaciones."</p>
+                </div>
+                <div class="testimoniales">
+                    <h3>Empresa de Manufactura</h3>
+                    <p>"La Cooperativa de Seguridad ha
+                        superado nuestras expectativas. Su
+                        atención personalizada y soluciones a la
+                        medida han sido fundamentales para la
+                        protección de nuestros activos."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- fin testimoniales  -->
+
+    <!-- seccion carousel  -->
+
+    <section class="secCarousel">
+
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 1"></div>
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 2"></div>
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 3"></div>
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 4"></div>
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 5"></div>
+                <!-- Duplicamos las imágenes para dar la sensación de bucle -->
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 1"></div>
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 2"></div>
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 3"></div>
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 4"></div>
+                <div class="carousel-slide"><img src="img/carousel/logo1.jpg" alt="Sponsor 5"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- fin seccion carousel -->
+
+    <!-- seccion contacto  -->
+
+    <div class="contenedorGeneralContacto">
+        <div class="contenedorContactos">
+            <div class="contacto">
+                <h2>Contáctanos</h2>
+                <ul>
+                    <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="contacto">
+                <img src="img/manoEstrechandose.png" alt="descripcion para el SEO">
+                <hr class="soloEnMobileContacto">
+            </div>
+        </div>
+        <div class="contenedorFormulario">
+            <div class="contenedorForm">
+                <!-- formulario  -->
+                <div class="contact-form-container">
+                    <form id="contactForm" action="form/formulario.php" method="POST">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <span class="error" id="nombreError"></span>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error" id="emailError"></span>
+
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                        <span class="error" id="telefonoError"></span>
+
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        <span class="error" id="mensajeError"></span>
+                        <div class="recaptcha-container">
+                            <div class="g-recaptcha"
+                                data-sitekey="6Lfw6mgqAAAAACD8Si_QzgC8gnYCFirv8C4mw1Cs"></div>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+
+                    <div id="successMessage">
+                        <h2>¡Gracias por tu mensaje!</h2>
+                        <p>Nos pondremos en contacto contigo pronto.</p>
+                    </div>
+                </div>
+                <!-- fin formulario  -->
+            </div>
+            <div class="contenedorForm">
+                <img src="img/manosANotando.png" alt="descripcion para el SEO">
+            </div>
         </div>
     </div>
 
+    <!-- fin seccion contacto -->
 
+    <!-- seccion footer  -->
 
     <div class="contenedorFooter">
         <footer>
@@ -105,6 +298,10 @@
             <p>Todos los derechos reservados © Desarrollado por Usina Creativa</p>
         </div>
     </div>
+
+    <!-- fin footer  -->
+
+    <script src="js/carousel.js"></script>
     <script src="./js/formC.js"></script>
     <script src="./js/navBar.js"></script>
     <script src="https://kit.fontawesome.com/a720cb8047.js" crossorigin="anonymous"></script>

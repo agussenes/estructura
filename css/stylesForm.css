@@ -1,3 +1,25 @@
+:root {
+    --color_primario: #1C9DB3;
+    --color_primario_suave: #2F455C;
+    --color_font2: #124E73;
+    --color_secundario: #D32F2F;
+    --color_font: #fff;
+    --color_verde: #0B3022;
+    --color_amarillo: #FDB00B;
+    --color_iconos: #F57C00;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+    --backgroundButtons: #325F7B;
+    --fontServicios: #2B4150
+}
+
+.contact-form-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    overflow: hidden;
+}
+
 form {
     width: 100%;
     max-width: 600px;
@@ -7,24 +29,78 @@ form {
     border-radius: 10px;
     background-color: #f9f9f9;
 }
+
 label {
     font-weight: bold;
     display: block;
     margin-top: 10px;
+    color: var(--color_font2);
 }
-input, textarea {
+
+input,
+textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .error {
     color: red;
     font-size: 0.9em;
 }
+
 #successMessage {
     display: none;
     color: green;
     text-align: center;
+}
+
+.g-recaptcha {
+    transform: scale(0.85);
+    /* Ajusta el tamaño */
+    transform-origin: 0 0;
+    /* Mantiene el punto de origen al escalar */
+}
+
+.recaptcha-container {
+    width: 100%;
+    /* O el tamaño que necesites */
+    display: flex;
+    justify-content: center;
+    /* Centra el reCAPTCHA */
+    overflow: hidden;
+    /* Oculta cualquier exceso */
+}
+
+form button{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0px;
+    margin-top: 0.5rem !important;
+    background-color: var(--backgroundButtons);
+    color: var(--color_font);
+}
+
+form button:Hover {
+    background-color: var(--color_font);
+    color: var(--backgroundButtons);
+    border: 1px solid var(--backgroundButtons);
+}
+
+@media (min-width:768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    /* Estilos para PC de escritorio estándar */
+}
+
+@media (min-width: 1600px) {
+    /* Estilos para pantallas grandes o ultra-widescreen */
 }

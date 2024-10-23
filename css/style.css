@@ -1,15 +1,17 @@
 :root {
-    --color_primario: #F7D8A9;
-    --color_primario_suave: #f8e3c3;
-    --color_blanco: #fff;
+    --color_primario: #1C9DB3;
+    --color_primario_suave: #2F455C;
+    --color_font2: #124E73;
     --color_secundario: #D32F2F;
-    --color_font: #212121;
+    --color_font: #fff;
     --color_verde: #0B3022;
     --color_amarillo: #FDB00B;
     --color_iconos: #F57C00;
     --altura_header: 80px;
     --padding_left_right: 2rem;
     --ancho_maximo: 1200px;
+    --backgroundButtons: #325F7B;
+    --fontServicios: #2B4150
 }
 
 * {
@@ -18,11 +20,14 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #333;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--color_font);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 a {
     text-decoration: none;
@@ -104,6 +109,11 @@ ul {
     height: var(--altura_header);
 }
 
+.navbar a i {
+    font-size: 40px;
+    color: var(--color_font);
+}
+
 /* Footer  */
 
 .contenedorFooter {
@@ -113,7 +123,7 @@ ul {
 
 .copy {
     background-color: #212121;
-    color: var(--color_primario_suave);
+    color: var(--color_font);
     text-align: center;
     font-weight: 600;
     padding-top: 0.5rem;
@@ -136,9 +146,10 @@ footer {
 .info {
     display: flex;
     flex-direction: column;
-    justify-content:first baseline;
+    justify-content: first baseline;
     align-items: center;
     padding-bottom: 1rem;
+    color: var(--color_font);
 }
 
 .info h3 {
@@ -153,9 +164,9 @@ footer {
 .footerContacto {
     display: flex;
     flex-direction: column;
-    justify-content:first baseline;
+    justify-content: first baseline;
     padding-bottom: 1rem;
-    
+    color: var(--color_font);
 }
 
 .footerContacto h3 {
@@ -184,8 +195,9 @@ footer {
 .ubicacion {
     display: flex;
     flex-direction: column;
-    justify-content:first baseline;
+    justify-content: first baseline;
     padding-bottom: 1rem;
+    color: var(--color_font);
 }
 
 .ubicacion h3 {
@@ -202,6 +214,306 @@ footer {
 
 /* fin footer  */
 
+/* portada  */
+
+.contenedorGenPorada {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.tituloPortada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 2rem;
+    color: var(--color_font2);
+    margin-right: 0.5rem;
+}
+
+.tituloPortada h1 {
+    margin-bottom: 0.5rem;
+}
+
+.contenedorImagenPorada img {
+    width: 100%;
+    height: 100%;
+}
+
+.botonesPortada {}
+
+.botonesPortada button {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.botonPortada1 button {
+    margin-top: 0.5rem !important;
+    background-color: var(--backgroundButtons);
+    color: var(--color_font);
+    border: 0px;
+
+}
+
+.botonPortada1 button:Hover {
+    background-color: var(--color_font);
+    color: var(--backgroundButtons);
+    border: 1px solid var(--backgroundButtons);
+}
+
+.botonPortada2 button {
+    margin-top: 0.5rem !important;
+    background-color: var(--color_font);
+    color: var(--backgroundButtons);
+    border: 1px solid var(--backgroundButtons);
+}
+
+.botonPortada2 button:hover {
+    background-color: var(--backgroundButtons);
+    color: var(--color_font);
+    border: 0px;
+}
+
+/* fin portada  */
+
+/* propuesta de valor  */
+
+.propuestaDeValor {
+    background-color: var(--backgroundButtons);
+    padding: 0 var(--padding_left_right);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.propuestaDeValor h2 {
+    color: var(--color_font);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.valores {
+    padding-bottom: 0.5rem;
+    color: var(--color_font);
+}
+
+/* fin propuesta de valor  */
+
+/* seccion servicios */
+
+.seccionServicios {
+    padding: 0 var(--padding_left_right);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #F6F0E4;
+}
+
+.contenedorGeneralServicios {
+    color: var(--color_font2);
+}
+
+.contenedorGeneralServicios h2 {
+    color: var(--color_font2);
+    text-align: center;
+}
+
+.contenedorServicios {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+.servicios {
+    display: flex;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+}
+
+.numero {
+    background-color: #e7e7e7;
+    color: var(--fontServicios);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.contenido {
+    color: var(--fontServicios);
+}
+
+/* fin seccion servicios */
+
+/* seccion testimoniales */
+
+.sectionTestimoniales{
+    position: relative;
+    background-image: url('../img/juntaBackground.png');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 1rem;
+    color: white;
+    text-align: center;
+}
+
+.sectionTestimoniales::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eef0eca8; 
+    z-index: 1;
+}
+
+.contenedorGeneralTestimoniales{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+.contenedorGeneralTestimoniales h2{
+    color: #124E73;
+}
+
+.testimoniales{
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.testimoniales h3{
+    color: var(--backgroundButtons);
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+
+.testimoniales p{
+    color: var(--backgroundButtons);
+    text-align: left;
+}
+
+
+/* fin testimoniales */
+
+/* seccion carousel  */
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Oculta los logos que salen del contenedor */
+    background-color: var(--color_font2); /* Fondo opcional */
+    padding: 20px 0;
+  }
+  
+  .carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite; /* Animación de desplazamiento continuo */
+  }
+  
+  .carousel-slide {
+    min-width: 200px; /* Tamaño del contenedor de cada logo */
+    margin: 0 20px; /* Espacio entre logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-slide img {
+    max-width: 100px; /* Tamaño máximo del logo */
+    object-fit: contain;
+    border-radius: 2rem;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0); /* Comienza en la posición original */
+    }
+    100% {
+      transform: translateX(-100%); /* Desplaza todo el contenedor hacia la izquierda */
+    }
+  }
+
+/* fin carousel  */
+
+/* seccion contacto  */
+
+.contenedorGeneralContacto{
+    padding: 2rem var(--padding_left_right)
+}
+
+.contacto{
+    text-align: center;
+    color: var(--color_font2);
+}
+
+.contacto h2{
+    margin-bottom: 0.5rem;
+}
+
+.contacto img{
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.contacto ul{
+ display: flex;
+ gap: 2rem;
+ justify-content: center;
+ margin-bottom: 1rem;
+}
+
+.contacto ul li{
+    background-color: var(--color_primario);
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 100%;
+}
+
+.contacto ul li a i{
+    color: var(--color_font);
+}
+
+.contenedorForm{
+
+}
+
+.contenedorForm img{
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.soloEnMobileContacto{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color_font2);
+}
+
+/* fin seccion contacto */
 
 /* /////////////////////////////////////////
 ////////////////RESPONSIVE/////////////////
@@ -240,7 +552,7 @@ footer {
         color: #C2163E;
     }
 
-    footer{
+    footer {
         padding-left: 5rem;
         padding-right: 5rem;
     }
@@ -248,17 +560,17 @@ footer {
 }
 
 @media (min-width: 992px) {
-   .soloEnMobile{
-    display: none;
-   }
+    .soloEnMobile {
+        display: none;
+    }
 
-   footer{
-    grid-template-columns: repeat(3, 1fr);
-   }
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-   .ubicacion iframe{
-    height: auto;
-   }
+    .ubicacion iframe {
+        height: auto;
+    }
 }
 
 @media (min-width: 1200px) {
