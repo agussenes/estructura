@@ -949,6 +949,10 @@ footer {
 
     .tituloPortada h1 {
         font-size: 3.3rem;
+        margin-bottom: 1.5rem;
+    }
+    .tituloPortada p{
+        margin-bottom: 1rem;
     }
 
     /* propuesta valor  */
