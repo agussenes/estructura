@@ -1,6 +1,6 @@
 <?php
 // Clave secreta de reCAPTCHA
-$secretKey = "6Lfw6mgqAAAAAMJV4jckv8avwHiERPapRtrkWxmp";  // Cambia esto por tu clave secreta
+$secretKey = "6Lfu-2oqAAAAAGgCx8LYJIcfxXDQYVRsFEHHeDuV";  // Cambia esto por tu clave secreta
 
 // Recibir datos del formulario
 $nombre = htmlspecialchars(trim($_POST['nombre']));
@@ -25,7 +25,7 @@ if (!$responseData->success) {
 }
 
 // Aquí procesas el formulario si el reCAPTCHA fue exitoso
-$destino = "info@inovandodes.com";  // Cambia esto con tu dirección de correo
+$destino = "info@innovandodes.com";  // Cambia esto con tu dirección de correo
 $asunto = "Nuevo mensaje del formulario de contacto";
 
 // Crear el cuerpo del email para el administrador
@@ -36,7 +36,7 @@ $cuerpo .= "Teléfono: $telefono\n";
 $cuerpo .= "Mensaje:\n$mensaje\n";
 
 // Enviar email al administrador
-$headers = "From: noreply@inovandodes.com\r\n";
+$headers = "From: noreply@innovandodes.com\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -52,8 +52,8 @@ $cuerpoConfirmacion .= "Tu mensaje fue:\n$mensaje\n\n";
 $cuerpoConfirmacion .= "Saludos,\nEl equipo de soporte.";
 
 // Encabezados para el correo de confirmación al usuario
-$headersConfirmacion = "From: noreply@inovandodes.com\r\n";
-$headersConfirmacion .= "Reply-To: info@inovandodes.com\r\n";
+$headersConfirmacion = "From: noreply@innovandodes.com\r\n";
+$headersConfirmacion .= "Reply-To: info@innovandodes.com\r\n";
 $headersConfirmacion .= "MIME-Version: 1.0\r\n";
 $headersConfirmacion .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headersConfirmacion .= "X-Mailer: PHP/" . phpversion();

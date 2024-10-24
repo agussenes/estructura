@@ -2,67 +2,67 @@ const form = document.getElementById('contactForm');
 form.addEventListener('submit', function(event) {
     event.preventDefault();  // Evitar el envío estándar del formulario
 
-    // Validaciones aquí (si deseas agregar alguna adicional)
     let isValid = true;
 
-    // Validar Nombre Completo
-    const nombre = document.getElementById('nombre');
+    // Validaciones
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const telefono = document.getElementById('telefono').value;
+    const mensaje = document.getElementById('mensaje').value;
+
     const nombreError = document.getElementById('nombreError');
-    if (nombre.value.trim() === '') {
-        nombreError.textContent = 'El nombre completo es requerido.';
-        isValid = false;
-    } else {
-        nombreError.textContent = '';
-    }
-
-    // Validar Email
-    const email = document.getElementById('email');
     const emailError = document.getElementById('emailError');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email.value)) {
-        emailError.textContent = 'Por favor, ingresa un email válido.';
-        isValid = false;
-    } else {
-        emailError.textContent = '';
-    }
-
-    // Validar Teléfono
-    const telefono = document.getElementById('telefono');
     const telefonoError = document.getElementById('telefonoError');
-    if (telefono.value.trim() === '') {
-        telefonoError.textContent = 'El teléfono es requerido.';
-        isValid = false;
-    } else {
-        telefonoError.textContent = '';
-    }
-
-    // Validar Mensaje
-    const mensaje = document.getElementById('mensaje');
     const mensajeError = document.getElementById('mensajeError');
-    if (mensaje.value.trim() === '') {
-        mensajeError.textContent = 'El mensaje no puede estar vacío.';
+
+    // Limpiar mensajes de error
+    nombreError.textContent = '';
+    emailError.textContent = '';
+    telefonoError.textContent = '';
+    mensajeError.textContent = '';
+
+    // Validar nombre
+    if (nombre.trim() === '') {
         isValid = false;
-    } else {
-        mensajeError.textContent = '';
+        nombreError.textContent = 'El nombre completo es requerido.';
     }
 
-    // Si todo es válido, enviar los datos mediante AJAX
+    // Validar email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        isValid = false;
+        emailError.textContent = 'Por favor, ingresa un email válido.';
+    }
+
+    // Validar teléfono
+    if (telefono.trim() === '') {
+        isValid = false;
+        telefonoError.textContent = 'El teléfono es requerido.';
+    }
+
+    // Validar mensaje
+    if (mensaje.trim() === '') {
+        isValid = false;
+        mensajeError.textContent = 'El mensaje no puede estar vacío.';
+    }
+
+    // Si las validaciones son correctas
     if (isValid) {
         const formData = new FormData(form);
 
-        // Enviar los datos mediante fetch
+        // Enviar los datos al servidor PHP para el correo
         fetch('form/formulario.php', {
             method: 'POST',
             body: formData
         })
         .then(response => response.text())
         .then(data => {
-            // Ocultar el formulario y mostrar el mensaje de éxito
+            // Mostrar mensaje de éxito si el correo fue enviado
             form.style.display = 'none';
             document.getElementById('successMessage').style.display = 'block';
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error en el envío del correo:', error);
         });
     }
 });
