@@ -147,7 +147,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: first baseline;
-    align-items: center;
     padding-bottom: 1rem;
     color: var(--color_font);
 }
@@ -158,7 +157,7 @@ footer {
 }
 
 .info p {
-    text-align: center;
+    text-align: left;
 }
 
 .footerContacto {
@@ -679,8 +678,16 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .info h3 {
+        text-align: left;
+    }
+
     .ubicacion iframe {
         height: auto;
+    }
+
+    .ubicacion h3{
+        text-align: right;
     }
 
     /* portada  */
