@@ -186,9 +186,9 @@ footer {
     color: var(--color_font);
 }
 
-.footerContacto li a i {
+.footerContacto li a:hover{
     color: var(--color_secundario);
-    font-size: 18px;
+    transition: all .3s;
 }
 
 .ubicacion {
@@ -660,6 +660,7 @@ footer {
     }
 
     .contacto ul li {
+        display: flex;
         font-size: 1.3rem;
     }
 }
@@ -791,8 +792,8 @@ footer {
     }
 
     .contacto ul li {
-        padding-top: 0.2rem;
-        padding-bottom: 0.2rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
@@ -913,8 +914,8 @@ footer {
     }
 
     .contacto ul li {
-        padding-top: 0.2rem;
-        padding-bottom: 0.2rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
@@ -936,7 +937,7 @@ footer {
 @media (min-width: 1600px) {
     
     *{
-        font-size: 20px;
+        font-size: 24px;
     }
     
     /* portada  */
@@ -947,7 +948,7 @@ footer {
     }
 
     .tituloPortada h1 {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
     }
 
     /* propuesta valor  */
@@ -974,7 +975,7 @@ footer {
     }
 
     .valores h3 {
-        font-size: 2rem;
+        font-size: 1.1rem;
         margin-bottom: 0.5rem;
         text-align: left;
     }
@@ -1003,7 +1004,7 @@ footer {
     }
 
     .contenido h3{
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     /* testimoniales  */
@@ -1032,7 +1033,7 @@ footer {
         min-height: 18rem;
     }
     .testimoniales h3{
-        font-size:1.5rem;
+        font-size:1.1rem;
     }
 
     /* contacto  */
@@ -1052,10 +1053,11 @@ footer {
         padding-bottom: 0.2rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+      
     }
 
     .contacto ul li a i {
-        font-size: 22px;
+        font-size: 26px;
     }
 
     .contenedorForm img{

@@ -85,12 +85,13 @@ form button{
     margin-top: 0.5rem !important;
     background-color: var(--backgroundButtons);
     color: var(--color_font);
+    border: 1px solid var(--backgroundButtons);
 }
 
 form button:Hover {
     background-color: var(--color_font);
     color: var(--backgroundButtons);
-    border: 1px solid var(--backgroundButtons);
+   
 }
 
 @media (min-width:768px) {}
