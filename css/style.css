@@ -219,8 +219,6 @@ footer {
 .contenedorGenPorada {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-top: 1rem;
-    padding-bottom: 1rem;
 }
 
 .tituloPortada {
@@ -231,10 +229,13 @@ footer {
     padding-left: 2rem;
     color: var(--color_font2);
     margin-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .tituloPortada h1 {
     margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
 .contenedorImagenPorada img {
@@ -257,27 +258,27 @@ footer {
     margin-top: 0.5rem !important;
     background-color: var(--backgroundButtons);
     color: var(--color_font);
-    border: 0px;
+    border: 1px solid var(--backgroundButtons);
 
 }
 
 .botonPortada1 button:Hover {
     background-color: var(--color_font);
     color: var(--backgroundButtons);
-    border: 1px solid var(--backgroundButtons);
+
 }
 
 .botonPortada2 button {
     margin-top: 0.5rem !important;
-    background-color: var(--color_font);
-    color: var(--backgroundButtons);
+    background-color: var(--backgroundButtons);
+    color: var(--color_font);
     border: 1px solid var(--backgroundButtons);
+
 }
 
 .botonPortada2 button:hover {
-    background-color: var(--backgroundButtons);
-    color: var(--color_font);
-    border: 0px;
+    background-color: var(--color_font);
+    color: var(--backgroundButtons);
 }
 
 /* fin portada  */
@@ -293,7 +294,7 @@ footer {
 
 .propuestaDeValor h2 {
     color: var(--color_font);
-    text-align: center;
+    text-align: left;
     padding-bottom: 1rem;
 }
 
@@ -360,7 +361,7 @@ footer {
 
 /* seccion testimoniales */
 
-.sectionTestimoniales{
+.sectionTestimoniales {
     position: relative;
     background-image: url('../img/juntaBackground.png');
     background-size: cover;
@@ -377,25 +378,26 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #eef0eca8; 
+    background-color: #eef0eca8;
     z-index: 1;
 }
 
-.contenedorGeneralTestimoniales{
+.contenedorGeneralTestimoniales {
     position: relative;
     z-index: 2;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
-    
+
 }
-.contenedorGeneralTestimoniales h2{
+
+.contenedorGeneralTestimoniales h2 {
     color: #124E73;
 }
 
-.testimoniales{
-    background-color: rgba(255, 255, 255, 0.9); 
+.testimoniales {
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 1.5rem;
     border-radius: 10px;
     max-width: 300px;
@@ -403,13 +405,13 @@ footer {
     margin-bottom: 1rem;
 }
 
-.testimoniales h3{
+.testimoniales h3 {
     color: var(--backgroundButtons);
     text-align: left;
     padding-bottom: 0.5rem;
 }
 
-.testimoniales p{
+.testimoniales p {
     color: var(--backgroundButtons);
     text-align: left;
 }
@@ -421,70 +423,79 @@ footer {
 
 .carousel-container {
     width: 100%;
-    overflow: hidden; /* Oculta los logos que salen del contenedor */
-    background-color: var(--color_font2); /* Fondo opcional */
+    overflow: hidden;
+    /* Oculta los logos que salen del contenedor */
+    background-color: var(--color_font2);
+    /* Fondo opcional */
     padding: 20px 0;
-  }
-  
-  .carousel-track {
+}
+
+.carousel-track {
     display: flex;
-    animation: scroll 20s linear infinite; /* Animación de desplazamiento continuo */
-  }
-  
-  .carousel-slide {
-    min-width: 200px; /* Tamaño del contenedor de cada logo */
-    margin: 0 20px; /* Espacio entre logos */
+    animation: scroll 20s linear infinite;
+    /* Animación de desplazamiento continuo */
+}
+
+.carousel-slide {
+    min-width: 200px;
+    /* Tamaño del contenedor de cada logo */
+    margin: 0 20px;
+    /* Espacio entre logos */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .carousel-slide img {
-    max-width: 100px; /* Tamaño máximo del logo */
+}
+
+.carousel-slide img {
+    max-width: 100px;
+    /* Tamaño máximo del logo */
     object-fit: contain;
     border-radius: 2rem;
-  }
-  
-  @keyframes scroll {
+}
+
+@keyframes scroll {
     0% {
-      transform: translateX(0); /* Comienza en la posición original */
+        transform: translateX(0);
+        /* Comienza en la posición original */
     }
+
     100% {
-      transform: translateX(-100%); /* Desplaza todo el contenedor hacia la izquierda */
+        transform: translateX(-100%);
+        /* Desplaza todo el contenedor hacia la izquierda */
     }
-  }
+}
 
 /* fin carousel  */
 
 /* seccion contacto  */
 
-.contenedorGeneralContacto{
+.contenedorGeneralContacto {
     padding: 2rem var(--padding_left_right)
 }
 
-.contacto{
+.contacto {
     text-align: center;
     color: var(--color_font2);
 }
 
-.contacto h2{
+.contacto h2 {
     margin-bottom: 0.5rem;
 }
 
-.contacto img{
+.contacto img {
     width: 100%;
     border-radius: 10px;
     display: none;
 }
 
-.contacto ul{
- display: flex;
- gap: 2rem;
- justify-content: center;
- margin-bottom: 1rem;
+.contacto ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
-.contacto ul li{
+.contacto ul li {
     background-color: var(--color_primario);
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
@@ -493,21 +504,18 @@ footer {
     border-radius: 100%;
 }
 
-.contacto ul li a i{
+.contacto ul li a i {
     color: var(--color_font);
 }
 
-.contenedorForm{
+.contenedorForm {}
 
-}
-
-.contenedorForm img{
+.contenedorForm img {
     width: 100%;
-    border-radius: 10px;
     display: none;
 }
 
-.soloEnMobileContacto{
+.soloEnMobileContacto {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 1px solid var(--color_font2);
@@ -552,14 +560,117 @@ footer {
         color: #C2163E;
     }
 
+    /* footer  */
     footer {
         padding-left: 5rem;
         padding-right: 5rem;
     }
 
+    /* portada  */
+
+    .tituloPortada {
+        padding-left: 4rem;
+    }
+
+    .tituloPortada h1 {
+        font-size: 2.5rem;
+    }
+
+    /* propuesta valor  */
+
+    .propuestaDeValor {
+        padding: 0 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .propuestaDeValor h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .conGenvalores {}
+
+    .valores {
+        margin-bottom: 0.5rem;
+    }
+
+    .valores h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .valores p {
+        text-align: left;
+    }
+
+    /* servicios  */
+
+    .seccionServicios {
+        padding: 0 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .contenedorGeneralServicios {}
+
+    .contenedorGeneralServicios h2 {
+        font-size: 2rem;
+    }
+
+    .contenedorServicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* testimoniales  */
+    .sectionTestimoniales {
+        padding: 0 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .contenedorGeneralTestimoniales {}
+
+    .contenedorGeneralTestimoniales h2 {
+        font-size: 2rem;
+    }
+
+    .contenedorTestimoniales {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimoniales {
+        max-width: 80%;
+    }
+
+    /* contacto  */
+
+    .contenedorGeneralContacto {
+        padding: 0 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .contacto h2 {
+        font-size: 2rem;
+    }
+
+    .contacto ul li {
+        font-size: 1.3rem;
+    }
 }
 
 @media (min-width: 992px) {
+
+    * {
+        font-size: 18px;
+    }
+
     .soloEnMobile {
         display: none;
     }
@@ -571,12 +682,381 @@ footer {
     .ubicacion iframe {
         height: auto;
     }
+
+    /* portada  */
+
+    .tituloPortada {
+        padding-left: 6rem;
+        padding-right: 1rem;
+    }
+
+    .tituloPortada h1 {
+        font-size: 2.5rem;
+    }
+
+    /* propuesta valor  */
+
+    .propuestaDeValor {
+        padding: 0 6rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .propuestaDeValor h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .conGenvalores {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .valores {
+        margin-bottom: 0.5rem;
+    }
+
+    .valores h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .valores p {
+        text-align: left;
+    }
+
+    /* servicios  */
+
+    .seccionServicios {
+        padding: 0 6rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .contenedorGeneralServicios {}
+
+    .contenedorGeneralServicios h2 {
+        font-size: 2rem;
+    }
+
+    .contenedorServicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* testimoniales  */
+    .sectionTestimoniales {
+        padding: 0 6rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .contenedorGeneralTestimoniales {}
+
+    .contenedorGeneralTestimoniales h2 {
+        font-size: 2rem;
+    }
+
+    .contenedorTestimoniales {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .testimoniales {
+        max-width: 100%;
+        min-height: 18rem;
+    }
+
+    /* contacto  */
+
+    .contenedorGeneralContacto {
+        padding: 0 6rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .contacto h2 {
+        font-size: 2rem;
+    }
+
+    .contacto ul li {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .contacto ul li a i {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
-    /* Estilos para PC de escritorio estándar */
+    
+    /* portada  */
+
+    .tituloPortada {
+        padding-left: 8rem;
+        padding-right: 2rem;
+    }
+
+    .tituloPortada h1 {
+        font-size: 3rem;
+    }
+
+    /* propuesta valor  */
+
+    .propuestaDeValor {
+        padding: 0 8rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .propuestaDeValor h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .conGenvalores {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .valores {
+        margin-bottom: 0.5rem;
+    }
+
+    .valores h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .valores p {
+        text-align: left;
+    }
+
+    /* servicios  */
+
+    .seccionServicios {
+        padding: 0 12rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .contenedorGeneralServicios {}
+
+    .contenedorGeneralServicios h2 {
+        font-size: 2.5rem;
+    }
+
+    .contenedorServicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenido h3{
+        font-size: 1.5rem;
+    }
+
+    /* testimoniales  */
+    .sectionTestimoniales {
+        padding: 0 8rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .contenedorGeneralTestimoniales {}
+
+    .contenedorGeneralTestimoniales h2 {
+        font-size: 2.5rem;
+    }
+
+    .contenedorTestimoniales {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .testimoniales {
+        max-width: 100%;
+        min-height: 18rem;
+    }
+    .testimoniales h3{
+        font-size:1rem;
+    }
+
+    /* contacto  */
+
+    .contenedorGeneralContacto {
+        padding: 0 8rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .contacto h2 {
+        font-size: 2.5rem;
+    }
+
+    .contacto ul li {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .contacto ul li a i {
+        font-size: 20px;
+    }
+
+    .contenedorForm img{
+        display: block;
+        height: 100%;
+    }
+    .contenedorFormulario{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1600px) {
-    /* Estilos para pantallas grandes o ultra-widescreen */
+    
+    *{
+        font-size: 20px;
+    }
+    
+    /* portada  */
+
+    .tituloPortada {
+        padding-left: 12rem;
+        padding-right: 3rem;
+    }
+
+    .tituloPortada h1 {
+        font-size: 3.5rem;
+    }
+
+    /* propuesta valor  */
+
+    .propuestaDeValor {
+        padding: 0 12rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .propuestaDeValor h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .conGenvalores {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .valores {
+        margin-bottom: 0.5rem;
+    }
+
+    .valores h3 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .valores p {
+        text-align: left;
+    }
+
+    /* servicios  */
+
+    .seccionServicios {
+        padding: 0 12rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .contenedorGeneralServicios {}
+
+    .contenedorGeneralServicios h2 {
+        font-size: 3rem;
+    }
+
+    .contenedorServicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenido h3{
+        font-size: 1.5rem;
+    }
+
+    /* testimoniales  */
+    .sectionTestimoniales {
+        padding: 0 12rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .contenedorGeneralTestimoniales {}
+
+    .contenedorGeneralTestimoniales h2 {
+        font-size: 3rem;
+    }
+
+    .contenedorTestimoniales {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.3rem;
+    }
+
+    .testimoniales {
+        max-width: 100%;
+        min-height: 18rem;
+    }
+    .testimoniales h3{
+        font-size:1.5rem;
+    }
+
+    /* contacto  */
+
+    .contenedorGeneralContacto {
+        padding: 0 12rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .contacto h2 {
+        font-size: 3rem;
+    }
+
+    .contacto ul li {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .contacto ul li a i {
+        font-size: 22px;
+    }
+
+    .contenedorForm img{
+        display: block;
+        height: 100%;
+    }
+    .contenedorFormulario{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
